@@ -5,6 +5,8 @@
  */
 package javaexercises1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author justenquirante
@@ -15,40 +17,59 @@ public class JavaExercises1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
         
-        // Calculate 45 + 78 / 87
+//        int value = scanner.nextInt();
+//        
+//        calcFibonacci(value);
         
-        System.out.println("Exercise 1: Calculate 45 + 78 /87");
-        double answer = 45 + (double) 78 / 87;
-        System.out.println(answer);
-        System.out.println("\n");
-        // Assign variable A to int 8 and then change it to String “8”
+//        int primeTestVal = scanner.nextInt();
+//        
+//        System.out.println(primeNumber(primeTestVal));
         
-        System.out.println("Exercise 2: Assign variable A to int 8 and then change it to String 8");
-        
-        int a = 8;
-        String convertedInt = Integer.toString(a);
-        System.out.println("The variable a is now - " + ((Object)convertedInt).getClass().getName());
-        System.out.println("\n");
-        // Assign Variable with your name and print string with replaced “My name is ” 
-        
-        System.out.println("Exercise 3: Assign Variable with your name and print string with replaced - My name is");
-        String name = "Justen";
-        System.out.println("My name is " + name);
-        System.out.println("\n");
-        //If else. - Assign int variable. If var is odd print “number is Odd”
-        
-        System.out.println("Exercise 4: If else. - Assign int variable. If var is odd print -- number is Odd");
-        int odd = 3;
-        
-        if (odd % 2 != 0) {
-            System.out.println("Number is Odd");
-        } else {
-            System.out.println("Number is Even");
-        }
-        
-        System.out.println("\n");
+      
         
     }
     
+    public static void calcFibonacci(int value) {
+        System.out.println("Running");
+        
+        int total = 0;
+        int initVal = 0;
+        int nextVal = 1;
+        for (int x = 0; x < value; x++) {    
+            total += initVal;
+            initVal = nextVal;
+            nextVal = total;
+            
+            System.out.println("Total is " + total);
+        
+        }
+    }
+    
+    public static boolean primeNumber(int value) {
+        System.out.println("Calculate prime");
+        
+        boolean isPrime = true;
+        if (value == 0 || value == 1) {
+           isPrime = false;
+        } else {
+           for (int x = 2; x < value; x++) {
+               if (value % x == 0) {
+                   isPrime = false;
+               } 
+           }
+        
+        }
+        
+        return isPrime;
+                
+    
+    }
+    
+    public static String countString(String word) {
+    
+        System.out.println("Count String Running");
+    }
 }
