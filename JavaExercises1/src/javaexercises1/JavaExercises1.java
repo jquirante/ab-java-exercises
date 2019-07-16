@@ -16,39 +16,27 @@ public class JavaExercises1 {
      */
     public static void main(String[] args) {
         
-        // Calculate 45 + 78 / 87
+        // Calculate 20 + -3 * 5 / 8
         
-        System.out.println("Exercise 1: Calculate 45 + 78 /87");
-        double answer = 45 + (double) 78 / 87;
-        System.out.println(answer);
-        System.out.println("\n");
-        // Assign variable A to int 8 and then change it to String “8”
+        double a = 20 + (double) (-3 * 5) / 8;
+        System.out.println("Calculate 20 + -3 * 5 / 8 \n" + a);
         
-        System.out.println("Exercise 2: Assign variable A to int 8 and then change it to String 8");
+        // Convert Farenheight to Celsius
         
-        int a = 8;
-        String convertedInt = Integer.toString(a);
-        System.out.println("The variable a is now - " + ((Object)convertedInt).getClass().getName());
-        System.out.println("\n");
-        // Assign Variable with your name and print string with replaced “My name is ” 
+        int temperature = 87;
+        double convertedTemp = (temperature - 32) * (double) 5/9;
+        System.out.println("Convert Farenheight to Celsius: \n" + convertedTemp);
         
-        System.out.println("Exercise 3: Assign Variable with your name and print string with replaced - My name is");
-        String name = "Justen";
-        System.out.println("My name is " + name);
-        System.out.println("\n");
-        //If else. - Assign int variable. If var is odd print “number is Odd”
+        // If Else - Print 'Number is odd'
         
-        System.out.println("Exercise 4: If else. - Assign int variable. If var is odd print -- number is Odd");
-        int odd = 3;
+        int oddNumber = 3;
         
-        if (odd % 2 != 0) {
+        if (oddNumber % 2 != 0) {
             System.out.println("Number is Odd");
         } else {
-            System.out.println("Number is Even");
+            System.out.println("Number is not Odd");
         }
         
-        System.out.println("\n");
-        
     }
-    
+     
 }
